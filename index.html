@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>LaTeX Cover Page Studio | Professional Generator</title>
+    <!-- Google Fonts & Modern CSS Reset -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 (free icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="generator-container">
+    <div class="hero-section">
+        <h1>
+            <i class="fas fa-scroll"></i> 
+            LaTeX Cover Page Studio
+        </h1>
+        <p>Professional academic cover sheets · Assignment & Lab Report ready · Instant LaTeX export</p>
+    </div>
+
+    <div class="form-card">
+        <div class="form-panel">
+            <div class="form-grid">
+                <!-- University Name -->
+                <div class="input-group">
+                    <label><i class="fas fa-university"></i> University</label>
+                    <select id="universityName">
+                        <option value="">Select University</option>
+                        <option>Premier University, Chittagong</option>
+                        <option>University of Chittagong</option>
+                    </select>
+                </div>
+
+                <!-- Department Name -->
+                <div class="input-group">
+                    <label><i class="fas fa-building"></i> Department</label>
+                    <select id="departmentName">
+                        <option value="">Select Department</option>
+                        <option>Department of Computer Science and Engineering</option>
+                        <option>Department of Electrical and Electronic Engineering</option>
+                        <option>Department of Business Administration</option>
+                        <option>Department of Civil Engineering</option>
+                        <option>Department of Economics</option>
+                    </select>
+                </div>
+
+                <!-- Report Type (Assignment / Lab Report) -->
+                <div class="input-group">
+                    <label><i class="fas fa-file-alt"></i> Document Type</label>
+                    <select id="reportType" onchange="updateLabels()">
+                        <option value="Assignment">Assignment</option>
+                        <option value="Lab Report">Lab Report</option>
+                    </select>
+                </div>
+
+                <!-- Course Name -->
+<div class="input-group">
+    <label><i class="fas fa-book"></i> Course Name</label>
+    <select id="courseName" onchange="setCourseCode()">
+        <option>Software Engineering</option>
+        <option>Software Engineering Laboratory</option>
+        <option>Computer Networks</option>
+        <option>Computer Networks Laboratory</option>
+        <option>Project Management and Entrepreneurship</option>
+        <option>Data Communication</option>
+        <option>Software Development Project</option>
+        <option>Theory of Computation</option>
+        <option>Software Testing and Quality Assurance</option>
+        <option>Software Testing and Assurance Quality Laboratory</option>
+        <option>Machine Learning</option>
+        <option>Machine Learning Lab</option>
+        <option>Cloud Computing</option>
+        <option>Cloud Computing Laboratory</option>
+        <option>Technical Writing and Presentation</option>
+        <option>Society, Engineering Ethics and Environmental Protection</option>
+    </select>
+</div>
+
+<!-- Course Code -->
+<div class="input-group">
+    <label><i class="fas fa-hashtag"></i> Course Code</label>
+    <input type="text" id="courseCode" placeholder="e.g., CSE-403" readonly>
+</div>
+
+                <!-- Report Number -->
+                <div class="input-group">
+                    <label><i class="fas fa-sort-numeric-down"></i> Report / Assignment No.</label>
+                    <input type="text" id="reportNumber" placeholder="Enter Number (e.g., 01)">
+                </div>
+
+                <!-- Report Title (Full width) -->
+                <div class="input-group full-width">
+                    <label><i class="fas fa-heading"></i> Report / Assignment Title Name </label>
+                    <input type="text" id="reportTitle" placeholder="Enter descriptive title ...">
+                </div>
+
+                <!-- Submission Date & Teacher Name side by side -->
+                <div class="input-group">
+                    <label><i class="fas fa-calendar-alt"></i> Submission Date</label>
+                    <input type="text" id="submissionDate" placeholder="DD/MM/YYYY or Month DD, YYYY">
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fas fa-chalkboard-user"></i> Course Teacher's Name</label>
+                    <input type="text" id="teacherName" placeholder="Instructor / Professor name">
+                </div>
+
+                <!-- Designation & Teacher Department -->
+                <div class="input-group">
+                    <label><i class="fas fa-user-tie"></i> Teacher's Designation</label>
+                    <select id="designation">
+                        <option>Lecturer</option>
+                        <option>Assistant Professor</option>
+                        <option>Associate Professor</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fas fa-door-open"></i> Course Teacher's Department</label>
+                    <select id="teacherUniversity">
+                        <option value="">Select Teacher Department</option>
+                        <option>Department of Computer Science and Engineering</option>
+                        <option>Department of Electrical and Electronic Engineering</option>
+                        <option>Department of Business Administration</option>
+                        <option>Department of Civil Engineering</option>
+                        <option>Department of Economics</option>
+                    </select>
+                </div>
+
+                <!-- Student Info Row -->
+                <div class="input-group">
+                    <label><i class="fas fa-user-graduate"></i> Student Name</label>
+                    <input type="text" id="studentName" placeholder="Full name">
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fas fa-id-card"></i> Student ID</label>
+                    <input type="text" id="studentId" placeholder="University Roll / ID">
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fas fa-layer-group"></i> Semester</label>
+                    <input type="text" id="semester" placeholder="e.g., 5th / 6th">
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fas fa-users"></i> Batch</label>
+                    <input type="text" id="batch" placeholder="e.g., 49th / 43th">
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fas fa-clock"></i> Session</label>
+                    <input type="text" id="session" placeholder=" Fall 2025 / Spring 2026 ">
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fas fa-chalkboard"></i> Section</label>
+                    <input type="text" id="section" placeholder="Section (A/B/C)">
+                </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="generateLatex()"><i class="fas fa-code"></i> Generate LaTeX</button>
+                <button class="btn btn-copy" onclick="copyLatex()"><i class="far fa-copy"></i> Copy Code</button>
+                <button class="btn btn-secondary" onclick="downloadTex()"><i class="fas fa-download"></i> Download .tex</button>
+            </div>
+        </div>
+
+        <!-- Output area -->
+        <div class="output-section">
+            <div class="output-header">
+                <span><i class="fas fa-terminal"></i> LaTeX source code</span>
+                <small style="color:#4b6a8b;"><i class="fas fa-magic"></i> ready for Overleaf / TeX Live</small>
+            </div>
+            <textarea id="latexOutput" class="latex-textarea" readonly placeholder="Click 'Generate LaTeX' to create your professional cover page..."></textarea>
+            <div class="note">
+                <i class="fas fa-info-circle"></i> LaTeX template generates a clean academic cover. Modify fields above and regenerate.
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
