@@ -107,7 +107,7 @@ Date of Submission \\> : ${submissionDate} \\\\[4pt]
 
 \\noindent
 \\begin{minipage}[t]{0.19\\textwidth}
-    \\textbf{Submitted to :}
+    \\textbf{Submitted To :}
 \\end{minipage}%
 \\begin{minipage}[t]{0.60\\textwidth}
     \\begin{center}
