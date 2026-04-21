@@ -18,6 +18,7 @@ function setCourseCode() {
         "Project Management and Entrepreneurship": "MGT 3301",
         "Data Communication": "CSE 4427",
         "Software Development Project": "CSE 3000",
+        "Computer and Cyber Security": "CSE 3637",
         "Theory of Computation": "CSE 3409",
         "Software Testing and Quality Assurance": "CSE 4293",
         "Software Testing and Assurance Quality Laboratory": "CSE 4294",
