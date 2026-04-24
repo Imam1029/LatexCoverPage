@@ -63,9 +63,9 @@ function generateLatex() {
         numberLabel = "Number of Lab Report";
     }
 
-    const latex = `\\documentclass[12pt,a4paper]{article}
+    const latex = `\\documentclass[14pt,a4paper]{extarticle}
 
-\\usepackage[margin=1in]{geometry}
+\\usepackage[margin=0.6in]{geometry}
 \\usepackage{graphicx}
 \\usepackage{setspace}
 \\usepackage{array}
@@ -90,11 +90,11 @@ function generateLatex() {
 \\begin{flushleft}
 
 \\begin{tabbing}
-Course Name \\hspace{3cm} \\= : ${courseName} \\\\[4pt]
-Course Code \\> : ${courseCode} \\\\[4pt]
-${reportLabel} \\> : ${reportTitle} \\\\[4pt]
-${numberLabel} \\> : ${reportNumber} \\\\[4pt]
-Date of Submission \\> : ${submissionDate} \\\\[4pt]
+Course Name \\hspace{3cm} \\= : ${courseName} \\\\[6pt]
+Course Code \\> : ${courseCode} \\\\[6pt]
+${reportLabel} \\> : \\parbox[t]{11.35cm}{${reportTitle}} \\\\[6pt]
+${numberLabel} \\> : ${reportNumber} \\\\[6pt]
+Date of Submission \\> : ${submissionDate} \\\\[6pt]
 \\end{tabbing}
 
 \\end{flushleft}
@@ -106,10 +106,10 @@ Date of Submission \\> : ${submissionDate} \\\\[4pt]
 \\vspace{60pt}
 
 \\noindent
-\\begin{minipage}[t]{0.25\\textwidth}
+\\begin{minipage}[t]{0.23\\textwidth}
     \\textbf{Submitted To :}
 \\end{minipage}%
-\\begin{minipage}[t]{0.60\\textwidth}
+\\begin{minipage}[t]{0.65\\textwidth}
     \\begin{center}
         \\textbf{${teacherName}}\\\\
         ${designation}\\\\
@@ -124,11 +124,11 @@ Date of Submission \\> : ${submissionDate} \\\\[4pt]
 \\textbf{Submitted By :}\\\\[10pt]
 
 \\begin{tabbing}
-Name \\hspace{4.45cm} \\= : ${studentName} \\\\[4pt]
-ID \\> : ${studentId}\\\\[4pt]
-Semester \\> : ${semester}\\\\[4pt]
-Batch \\> : ${batch}\\\\[4pt]
-Session \\> : ${session}\\\\[4pt]
+Name \\hspace{4.45cm} \\= : ${studentName} \\\\[6pt]
+ID \\> : ${studentId}\\\\[6pt]
+Semester \\> : ${semester}\\\\[6pt]
+Batch \\> : ${batch}\\\\[6pt]
+Session \\> : ${session}\\\\[6pt]
 Section \\> : ${section}
 \\end{tabbing}
 
